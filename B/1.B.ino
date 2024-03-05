@@ -16,12 +16,14 @@ void buttonTick(){
 void loop() {
   if (intFlag){
     intFlag = false;
-    if (previntFlag)
+    if (previntFlag){
       digitalWrite(8, LOW);
       Serial.println("LED: off");
-    else
+    }
+    else {
       digitalWrite(8, HIGH);
-        Serial.println("LED: on");
+      Serial.println("LED: on");
+    }
     previntFlag = !previntFlag;
   }
 }
